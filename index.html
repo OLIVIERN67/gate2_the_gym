@@ -1,0 +1,435 @@
+HTML:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Website</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background-color: #0066cc;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo img {
+    width: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Main Banner Section */
+.main-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0055cc;
+    padding: 50px;
+    color: white;
+}
+
+.main-banner h1 {
+    font-size: 3rem;
+}
+
+.main-banner h2 {
+    font-size: 2rem;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.main-banner img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #e2e2e2;
+}
+
+.features .feature {
+    width: 20%;
+    text-align: center;
+}
+
+.features h3 {
+    font-size: 1.5rem;
+}
+.games-section {
+    padding: 50px 20px;
+}
+
+.games-section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.games-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.game-card {
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.game-card h4 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.game-card p {
+    font-size: 1.2rem;
+    color: #ff6600;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.categories-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.categories-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.categories-section h3 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #333;
+}
+
+.categories-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.category-card {
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.category-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.category-card h4 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.category-card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+/* Shop Section */
+.shop-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0055cc;
+    padding: 50px 0;
+}
+
+.shop-card {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.shop-card h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.shop-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.shop-card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.shop-btn {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.shop-btn:hover {
+    background-color: #ff4500;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    text-align: center;
+    background-color: #e2e2e2;
+    padding: 50px 20px;
+}
+
+.newsletter-card {
+    background-color: white;
+    padding: 30px;
+    width: 350px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.newsletter-card h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.newsletter-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.newsletter-input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.subscribe-btn {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+    background-color: #ff4500;
+}
+    </style>
+</head>
+<body>
+  
+    <header>
+        <div class="logo">
+            <img src="https://via.placeholder.com/150" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Shop</a></li>
+                <li><a href="#">Product Details</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+    <section class="main-banner">
+        <div class="banner-content">
+            <h1>WELCOME TO LUGX</h1>
+            <h2>BEST GAMING SITE EVER!</h2>
+            <button class="search-btn">Search Now</button>
+            <img src="https://via.placeholder.com/300" alt="Gaming Image">
+        </div>
+    </section>
+
+  
+    <section class="features">
+        <div class="feature">
+            <h3>Free Storage</h3>
+        </div>
+        <div class="feature">
+            <h3>User More</h3>
+        </div>
+        <div class="feature">
+            <h3>Reply Ready</h3>
+        </div>
+        <div class="feature">
+            <h3>Easy Layout</h3>
+        </div>
+    </section>
+
+    <section class="games-section">
+        <h3>Trending Games</h3>
+        <div class="games-container">
+            <div class="game-card">
+                <img src="https://via.placeholder.com/150" alt="Game 1">
+                <h4>Assassin Creed</h4>
+                <p>20</p>
+            </div>
+            <div class="game-card">
+                <img src="https://via.placeholder.com/150" alt="Game 2">
+                <h4>Assassin Creed</h4>
+                <p>44</p>
+            </div>
+            <div class="game-card">
+                <img src="https://via.placeholder.com/150" alt="Game 3">
+                <h4>Assassin Creed</h4>
+                <p>$44</p>
+            </div>
+            <div class="game-card">
+                <img src="https://via.placeholder.com/150" alt="Game 4">
+                <h4>Assassin Creed</h4>
+                <p>32</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="games-section">
+        <h3>Most Played</h3>
+        <div class="games-container">
+            <div class="game-card">
+                <img src="https://via.placeholder.com/150" alt="Game 1">
+                <h4>Assassin Creed</h4>
+            </div>
+            <div class="game-card">
+                <img src="https://via.placeholder.com/150" alt="Game 2">
+                <h4>Assassin Creed</h4>
+            </div>
+            <div class="game-card">
+                <img src="https://via.placeholder.com/150" alt="Game 3">
+                <h4>Assassin Creed</h4>
+            </div>
+            <div class="game-card">
+                <img src="https://via.placeholder.com/150" alt="Game 4">
+                <h4>Assassin Creed</h4>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="categories-section">
+        <h2>Categories</h2>
+        <h3>Top Categories</h3>
+        <div class="categories-container">
+            <div class="category-card">
+                <img src="https://via.placeholder.com/150" alt="Brawlhalla">
+                <h4>Action</h4>
+                <p>Brawlhalla</p>
+            </div>
+            <div class="category-card">
+                <img src="https://via.placeholder.com/150" alt="Warframe">
+                <h4>Action</h4>
+                <p>Warframe</p>
+            </div>
+            <div class="category-card">
+                <img src="https://via.placeholder.com/150" alt="Tower of Fantasy">
+                <h4>Action</h4>
+                <p>Tower of Fantasy</p>
+            </div>
+            <div class="category-card">
+                <img src="https://via.placeholder.com/150" alt="Super People">
+                <h4>Action</h4>
+                <p>Super People</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section class="shop-section">
+        <div class="shop-card">
+            <h3>Our Shop</h3>
+            <h4>Go Pre-Order Buy & Get Best Prices For You!</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="shop-btn">SHOP NOW</button>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-card">
+            <h3>Newsletter</h3>
+            <h4>Get Up To $100 Off Just Buy Subscribe Newsletter!</h4>
+            <input type="email" placeholder="Enter your email" class="newsletter-input">
+            <button class="subscribe-btn">SUBSCRIBE NOW</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 LUGX Gaming. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
